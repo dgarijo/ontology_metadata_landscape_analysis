@@ -1,0 +1,14 @@
+build/*
+dist/*
+env*/*
+.vscode/
+.ipynb_checkpoints/
+config.json
+__pycache__/
+.DS_Store
+Lib/*
+Scripts/*
+.idea/*
+*.json
+*.ttl
+local_tests/*
