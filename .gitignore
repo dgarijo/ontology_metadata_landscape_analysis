@@ -12,3 +12,6 @@ Scripts/*
 *.json
 *.ttl
 local_tests/*
+ontology_files/*
+ontology_list/json_portals/*
+queries/api_keys.*

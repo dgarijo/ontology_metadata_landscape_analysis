@@ -1,0 +1,7 @@
+URL: http://data.bioontology.org/ontologies
+
+To download an ontology:
+
+curl -H "Authorization: apikey token=YOUR_TOKEN" https://data.bioontology.org/ontologies/ICO/download > ICO.owl
+
+An API key (YOUR_TOKEN) needs to be provided. 

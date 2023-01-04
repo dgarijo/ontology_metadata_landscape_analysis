@@ -1,0 +1,12 @@
+PREFIX vann:<http://purl.org/vocab/vann/>
+PREFIX voaf:<http://purl.org/vocommons/voaf#>
+ 
+### Vocabularies contained in LOV and their prefix
+SELECT DISTINCT  ?vocabURI {
+ 	GRAPH <https://lov.linkeddata.es/dataset/lov>{
+ 	 	?vocabURI a voaf:Vocabulary.
+
+}}
+
+
+URL: https://lov.linkeddata.es/dataset/lov/sparql

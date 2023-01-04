@@ -1,0 +1,14 @@
+URL: https://databus.dbpedia.org/yasgui/
+
+
+Query: PREFIX databus: <https://databus.dbpedia.org/> PREFIX dataid: <http://dataid.dbpedia.org/ns/core#> PREFIX dataid-cv: <http://dataid.dbpedia.org/ns/cv#> PREFIX dct: <http://purl.org/dc/terms/> PREFIX dcat: <http://www.w3.org/ns/dcat#> 
+SELECT DISTINCT ?file WHERE { 
+  { SELECT DISTINCT ?file WHERE { 
+      ?dataset dataid:account databus:ontologies . 
+      ?dataset dataid:artifact ?art. 
+      ?dataset dcat:distribution ?distribution . 
+      ?distribution <http://dataid.dbpedia.org/ns/cv#type> 'parsed'^^<http://www.w3.org/2001/XMLSchema#string> . 
+      ?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+      ?distribution dcat:downloadURL ?file . ?dataset dct:hasVersion ?latestVersion .
+      { SELECT DISTINCT ?art (MAX(?v) as ?latestVersion) 
+        WHERE { ?dataset dataid:account databus:ontologies . ?dataset dataid:artifact ?art. ?dataset dcat:distribution ?distribution . ?distribution <http://dataid.dbpedia.org/ns/cv#type> 'parsed'^^<http://www.w3.org/2001/XMLSchema#string> . ?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . ?dataset dct:hasVersion ?v . FILTER(str(?v) >"2020.05.06-170000") } GROUP BY ?art } } } }
