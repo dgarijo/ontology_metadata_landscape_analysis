@@ -1,7 +1,9 @@
+This is the same query for all bioportal-like portals.
+
 URL: http://data.bioontology.org/ontologies
 
-To download an ontology:
+To get the list of ontologies:
 
-curl -H "Authorization: apikey token=YOUR_TOKEN" https://data.bioontology.org/ontologies/ICO/download > ICO.owl
+curl -H "Authorization: apikey token=YOUR_TOKEN" https://data.bioontology.org/ontologies/ > ontologies.json
 
-An API key (YOUR_TOKEN) needs to be provided. 
+An API key (YOUR_TOKEN) needs to be provided.

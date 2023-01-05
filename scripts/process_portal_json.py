@@ -1,11 +1,13 @@
-# This script reads from the folder ../ontology_list
+# This script reads from the folder ../ontology_list/json_portals
+# For each of the JSONs there, we extract the "download" links only
+# Since you need a different API key for each bioportal, file download is handled separately
 import os
 import re
 import json
 import csv
 
 
-path = "../ontology_list/portals"
+path = "../ontology_list/json_portals"
 
 
 files = os.scandir(path)
