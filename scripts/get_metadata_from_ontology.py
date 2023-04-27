@@ -10,16 +10,23 @@ from rdflib.plugins.sparql import prepareQuery
 # including only the annotations for all ontos/concepts schemes found
 # If there is no ontology or concept scheme, the program produces an error
 
+# Usage: python get_metadata_from_ontology.py ../ontology_files/
+
 def extract_ontology_annotations(ontology_path, out_path): 
-    try:   
+    try:
+        print("Dealing with ontology: ",ontology_path) 
+        #print("size",os.path.getsize(ontology_path))  
         onto = Graph()
         onto.parse(ontology_path, format="turtle")    
     except:
         try:
             print("Could not parse ontology in ttl. Trying in xml...")
-            onto.parse(ontology_path, format="xml")    
+            # unfortunately, the xml parser of rdflib does not work very well.
+            # this part has to be repeated with owlapi
+#            onto.parse(ontology_path, format="xml")    
+            return
         except:
-            print("Could not load the ontology in rdf/xml or turte.")
+            #print("Could not load the ontology in rdf/xml or turte.")
             return
     
     q = prepareQuery('''
@@ -56,18 +63,32 @@ def extract_ontology_annotations(ontology_path, out_path):
     except Exception as e:
         print("Error while saving RDF results "+str(e))
 
+def process_folder(folder_path,folder_out):
+    for filename in os.listdir(folder_path):
+        path = os.path.join(folder_path, filename)
+        if os.path.isfile(path):
+            # for now skip very large ontos (> 50 Mb)
+            if(os.path.getsize(path)<50000000):
+                extract_ontology_annotations(path,folder_out)  
+        else:
+            process_folder(path, folder_out)
+
 
 # main script
-#directory = sys.argv[1]
-#for filename in os.listdir(directory):
-#    path = os.path.join(directory, filename)
-#    if os.path.isfile(path):
-#        print(filename)
+directory = sys.argv[1]
+out_dir = "metadata_results"
+if not os.path.isdir(out_dir):
+    os.mkdir(out_dir)
+process_folder(directory, out_dir)
 
 
-# Tests
+# Tests 
 #extract_ontology_annotations("../ontology_files/wild/w3id.org_example.ttl",".")
 #extract_ontology_annotations("../ontology_files/bioportal/M4M19-SUBS.owl",".")
+#extract_ontology_annotations("../ontology_files/archivo/purl.obolibrary.org_obo--envo--owl_2021.05.19-183543_obo--envo--owl_type=parsed.ttl",".")
+
+# problematic onto: does not load in rdflib (but does in protege)
+#extract_ontology_annotations("../ontology_files/bioportal/DFO.owl",".")
 
 
 
