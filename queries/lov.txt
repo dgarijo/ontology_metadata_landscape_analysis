@@ -1,12 +1,12 @@
+Query used to create the list of ontologies in LOV: https://lov.linkeddata.es/dataset/lov/sparql
+```
 PREFIX vann:<http://purl.org/vocab/vann/>
 PREFIX voaf:<http://purl.org/vocommons/voaf#>
- 
-### Vocabularies contained in LOV and their prefix
-SELECT DISTINCT  ?vocabURI {
+
+SELECT DISTINCT  ?voc ?download_url ?date {
  	GRAPH <https://lov.linkeddata.es/dataset/lov>{
- 	 	?vocabURI a voaf:Vocabulary.
-
+ 	 	?voc <http://www.w3.org/ns/dcat#distribution> ?download_url.
+    ?download_url <http://purl.org/dc/terms/issued> ?date
 }}
-
-
-URL: https://lov.linkeddata.es/dataset/lov/sparql
+```
+Blank nodes on the distribution were removed.

@@ -1,4 +1,7 @@
+http://10.0.3.120/download/eproc_FORN_v02.owl#
+http://10.0.3.120/download/eproc_FORN_v04.owl#
 http://a9.com/-/spec/opensearch/1.1/
+http://abs.270a.info/dataset/
 http://academic-meta-tool.xyz/vocab#
 http://advene.org/ns/cinelab/
 http://advene.org/ns/cinelab/ld
@@ -25,6 +28,7 @@ http://bag.basisregistraties.overheid.nl/def/bag
 http://bblfish.net/work/atom-owl/2006-06-06/
 http://beer.com/
 http://betalinkeddata.cbs.nl/def/cbs
+http://bg.dbpedia.org/resource/?????????:
 http://bibliograph.net/schemas/
 http://biglinkeddata.com/
 http://bihap.kb.gov.tr/ontology/
@@ -236,7 +240,6 @@ http://doc.metalex.eu/id/
 http://docs.oasis-open.org/ns/office/1.2/meta/odf#
 http://docs.oasis-open.org/ns/search-ws/xcql#
 http://dp.la/info/developers/map/
-http://dqm.faw.jku.at/ontologies/dsd
 http://drakon.su/
 http://drakon.su/ADF#
 http://dsnotify.org/vocab/eventset/0.1/
@@ -1419,7 +1422,6 @@ http://tadirah.dariah.eu/vocab/
 http://tarql.github.io/tarql#
 http://taxref.mnhn.fr/lod/property/
 http://taxref.mnhn.fr/lod/taxon/
-http://taxref.mnhn.fr/lod/taxref-ld
 http://td5.org/#
 http://telegraphis.net/ontology/geography/geography#
 http://telegraphis.net/ontology/measurement/code#
@@ -1539,7 +1541,6 @@ http://w3id.org/ghga/
 http://w3id.org/ldes#
 http://w3id.org/medred/medred#
 http://w3id.org/multidimensional-interface/ontology#
-http://w3id.org/nfdi4ing/metadata4ing#
 http://w3id.org/occ#
 http://w3id.org/oop#
 http://w3id.org/ost/ns#
@@ -1722,7 +1723,7 @@ http://www.movieontology.org/2009/11/09/movieontology.owl#
 http://www.music-encoding.org/ns/mei/
 http://www.mydomain.org/Mrk-ns#
 http://www.mygrid.org.uk/mygrid-moby-service#
-http://www.nanopub.org/nschema
+http://www.nanopub.org/nschema#
 http://www.neclimateus.org/
 http://www.newmedialab.at/fcp/
 http://www.nexml.org/2009/
@@ -2086,7 +2087,6 @@ https://prismdb.takanakahiko.me/prism-schema.ttl#
 https://privatealpha.com/ontology/content-inventory/1#
 https://privatealpha.com/ontology/ibis/1#
 https://privatealpha.com/ontology/transformation/1#
-https://purl.org/esric/sronto
 https://purl.org/fidbaudigital/subjects#
 https://purl.org/lg/
 https://rankrage.de/
@@ -2297,7 +2297,6 @@ https://w3id.org/cybele/model
 https://w3id.org/d2s/
 https://w3id.org/datafabric.cc/ontologies/fts
 https://w3id.org/datascope/
-https://w3id.org/dba/ontology/
 https://w3id.org/dco
 https://w3id.org/dcso/core
 https://w3id.org/dcso/extension
@@ -2690,7 +2689,6 @@ https://w3id.org/interactions/ontologies/profile/v1
 https://w3id.org/interactions/ontologies/signifiers/v1
 https://w3id.org/interont/
 https://w3id.org/iomust/
-https://w3id.org/iot-tta/
 https://w3id.org/iot/fd/
 https://w3id.org/iot/qoi/
 https://w3id.org/itil/glossary
@@ -2714,7 +2712,6 @@ https://w3id.org/lbdserver/
 https://w3id.org/lbs/
 https://w3id.org/lbs/TCI/
 https://w3id.org/lbs/tci#
-https://w3id.org/ldes
 https://w3id.org/legal_form#
 https://w3id.org/lemon-tree/
 https://w3id.org/library/
@@ -2888,7 +2885,7 @@ https://w3id.org/quality/voc/wcol
 https://w3id.org/qudt/vocab/quantity/ext
 https://w3id.org/rai/
 https://w3id.org/rail/topo#
-https://w3id.org/rains
+https://w3id.org/rains/
 https://w3id.org/rbeepsa/
 https://w3id.org/rbeepsa/ek4rbeepsa/
 https://w3id.org/rbeepsa/foi4rbeepsa/
@@ -2941,7 +2938,7 @@ https://w3id.org/rsp/vocals/
 https://w3id.org/rv-ontology/
 https://w3id.org/rvo/
 https://w3id.org/salon/
-https://w3id.org/sao
+https://w3id.org/sao/
 https://w3id.org/saref/
 https://w3id.org/saref4ee#
 https://w3id.org/sari/
@@ -2970,7 +2967,6 @@ https://w3id.org/semiot/ontologies/hydra/filter
 https://w3id.org/semiot/ontologies/hydra/pubsub
 https://w3id.org/semiot/ontologies/proto
 https://w3id.org/semiot/ontologies/semiot
-https://w3id.org/seo#
 https://w3id.org/seo/
 https://w3id.org/sepses/vocab/ref/
 https://w3id.org/sfs-ontology/
@@ -3044,7 +3040,6 @@ https://w3id.org/todo/tododm
 https://w3id.org/todo/tododom
 https://w3id.org/todo/tododt
 https://w3id.org/todo/tododw
-https://w3id.org/tree
 https://w3id.org/ttla/
 https://w3id.org/um/cbcm/eu-cm-ontology
 https://w3id.org/usability
