@@ -1,4 +1,5 @@
 # This script reads from the folder ../ontology_list
+# And merges all lists into one, removing duplicates
 import os
 import re
 import csv
